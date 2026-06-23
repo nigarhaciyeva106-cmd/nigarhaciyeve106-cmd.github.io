@@ -7,10 +7,15 @@
         body { margin: 0; background-color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
         header { background-color: #007BFF; color: white; padding: 25px; font-size: 28px; font-weight: bold; }
         .hero { margin-top: 40px; }
-        .btn { background-color: #007BFF; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-size: 20px; display: inline-block; }
-        .friends-section { margin-top: 50px; color: #333; display: flex; justify-content: space-around; padding: 20px; }
+        .btn { background-color: #007BFF; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-size: 20px; display: inline-block; margin: 10px; cursor: pointer; border: none; }
+        .friends-section { margin-top: 50px; color: #333; display: none; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
         .list-box { width: 45%; text-align: left; }
         h2 { border-bottom: 2px solid #007BFF; display: inline-block; }
+        
+        @media (max-width: 600px) {
+            .friends-section { flex-direction: column; }
+            .list-box { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -21,9 +26,11 @@
         <h1>3D dünyasına xoş gəldiniz!</h1>
         <p>Welcome to the 3D World</p>
         <a href="3d.html" class="btn">3D dünyasına giriş</a>
+        <br>
+        <button class="btn" onclick="toggleFriends()">Dostlarımı göstər</button>
     </div>
 
-    <div class="friends-section">
+    <div class="friends-section" id="friendsSection">
         <div class="list-box">
             <h2>Bakılı dostlar (1-25)</h2>
             <ol>
@@ -42,6 +49,17 @@
             </ol>
         </div>
     </div>
+
+    <script>
+        function toggleFriends() {
+            var section = document.getElementById("friendsSection");
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "flex";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
