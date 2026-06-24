@@ -4,67 +4,47 @@
     <meta charset="UTF-8">
     <title>Tərlanın Saytı</title>
     <style>
-        body { margin: 0; background-color: #0d1117; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
-        header { background-color: #161b22; color: white; padding: 20px; font-size: 28px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; border-bottom: 2px solid #007BFF; }
-        .logo { height: 60px; border-radius: 8px; }
+        body { margin: 0; background-color: #0d1117; color: #64ffda; font-family: 'Segoe UI', sans-serif; text-align: center; }
+        header { background-color: #161b22; color: #00d4ff; padding: 20px; font-size: 28px; font-weight: bold; border-bottom: 2px solid #00d4ff; }
         .hero { margin-top: 40px; }
-        .btn { background-color: #007BFF; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-size: 20px; display: inline-block; margin: 10px; cursor: pointer; border: none; transition: 0.3s; }
-        .btn:hover { background-color: #0056b3; }
-        .friends-section { margin-top: 50px; color: #c9d1d9; display: none; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
-        .list-box { width: 45%; text-align: left; }
-        h2 { border-bottom: 2px solid #007BFF; display: inline-block; padding-bottom: 5px; }
-        
-        @media (max-width: 600px) {
-            .friends-section { flex-direction: column; }
-            .list-box { width: 100%; }
-        }
+        .btn { background-color: #00d4ff; color: #0d1117; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-size: 20px; display: inline-block; margin: 10px; cursor: pointer; border: none; transition: 0.3s; font-weight: bold; }
+        .btn:hover { background-color: #64ffda; }
+        .section {margin-top: 50px; color: #c9d1d9; display: none; justify-content: center; padding: 20px; }
+        .list-box { width: 80%; text-align: left; }
+        h2 { border-bottom: 2px solid #64ffda; display: inline-block; padding-bottom: 5px; color: #00d4ff; }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo.png" alt="Loqo" class="logo">
-        Tərlanın Saytı
-    </header>
+    <header>Tərlanın Saytı</header>
 
     <div class="hero">
-        <h1>3D dünyasına xoş gəldiniz!</h1>
-        <p>Welcome to the 3D World</p>
-        <a href="3d.html" class="btn">3D dünyasına giriş</a>
+        <h1>3D Dünyasına Xoş Gəlmisiniz</h1>
+        <p>Welcome To The 3D World</p>
+        <a href="3d.html" class="btn">3D Dünyasına Girmək</a>
         <br>
-        <button class="btn" onclick="toggleFriends()">Dostlarımı göstər</button>
+        <button class="btn" onclick="toggleFamily()" style="background-color: #64ffda;">Ailəmi Görmək Üçün</button>
     </div>
 
-    <div class="friends-section" id="friendsSection">
+    <div class="section" id="familySection">
         <div class="list-box">
-            <h2>Bakılı dostlar (1-25)</h2>
+            <h2>Ailə və Qohumlar</h2>
             <ol>
-                <li>Fuad Musayev</li> <li>Kamran</li> <li>Ziya İsaev</li> <li>Nicat (7C)</li> <li>Rəvan (Saset)</li>
-                <li>Tunar</li> <li>Kərim Həsənli</li> <li>Mehdi (Tunarın qardaşı)</li> <li>Mehdi (Balaca boy)</li>
-                <li>Elvin Qafurzadə</li> <li>Emil Qafurzadə</li> <li>Yusif Abdullayev</li> <li>Yusif (Velosiped sürən)</li>
-                <li>Nurlan Zeynalzadə</li> <li>Həsən Mikayılzadə</li> <li>Elmar Əmirov</li> <li>Kənan Sultanov</li>
-                <li>Yusif Məmmədov</li> <li>Əhəd</li> <li>Kamil</li> <li>Məhəmməd</li> <li>Fəttah</li>
-                <li>Fərid</li> <li>Kənan (balaca boy)</li> <li>Uğur</li>
-            </ol>
-        </div>
-        <div class="list-box">
-            <h2>Gəncəli dostlar (26-30)</h2>
-            <ol start="26">
-                <li>İslam</li> <li>Ayxan (gəncəli)</li> <li>Mələk (Ayxanın Qardaşı)</li> <li>Mələk (Balaca boy)</li>
+                <li>Nigar(Anam)</li><li>İlqar(Atam)</li><li>Kənan(Qardaşım)</li><li>Şükran(Bacım)</li><li>Sənan(Qardaşım)</li><li>Rüfət(Əmim)</li><li>Afət(Bibim)</li><li>Hökümə(Qardaşımın Yoldaşı)</li>
+                <li>Xalidə(Nənəm)</li><li>Sabir(Babam)</li><li>Əsli(Nənəm)</li><li>Məhəmməd(Babam)</li><li>Əkbər(Babam)</li><li>Sayalı(Xalam)</li><li>Aynur(Xalam)</li>
+                <li>Süleyman(Dayım)</li><li>Ələkbər(Dayım)</li><li>Zəminə(Xalam D.D)</li><li>Aytən(Xalam D.D)</li><li>Nunuş(Xalam)</li><li>Emil(Dayım D.D)</li><li>Gülşən(Xalam Qızı)</li>
+                <li>Rəvan(Əmim Oğlu)</li><li>Xəyal(Xalam oğlu)</li><li>İslam(Xalam Oğlu)</li><li>Mələk(Dayım Qızı)</li><li>Fidan(Xalam Qızı)</li>Ayxan(Dayım Oğlu)</li><li>Ömər(Dayım Oğlu)</li>
+                <li>Uğur(Dayım Oğlu)</li>
             </ol>
         </div>
     </div>
 
     <script>
-        function toggleFriends() {
-            var section = document.getElementById("friendsSection");
-            if (section.style.display === "none" || section.style.display === "") {
-                section.style.display = "flex";
-            } else {
-                section.style.display = "none";
-            }
+        function toggleFamily () {
+            var section = document.getElementById("familySection");
+            section.style.display = (section.style.display === "flex") ? "none" : "flex"; 
         }
     </script>
-
+    
 </body>
 </html>
