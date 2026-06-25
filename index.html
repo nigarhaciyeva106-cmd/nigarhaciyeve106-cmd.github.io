@@ -9,7 +9,7 @@
         .hero { margin-top: 40px; }
         .btn { background-color: #00d4ff; color: #0d1117; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-size: 20px; display: inline-block; margin: 10px; cursor: pointer; border: none; transition: 0.3s; font-weight: bold; }
         .btn:hover { background-color: #64ffda; }
-        .section {margin-top: 50px; color: #c9d1d9; display: none; justify-content: center; padding: 20px; }
+        .section { margin-top: 50px; color: #c9d1d9; display: none; justify-content: center; padding: 20px; }
         .list-box { width: 80%; text-align: left; }
         h2 { border-bottom: 2px solid #64ffda; display: inline-block; padding-bottom: 5px; color: #00d4ff; }
     </style>
@@ -24,6 +24,7 @@
         <a href="3d.html" class="btn">3D Dünyasına Girmək</a>
         <br>
         <button class="btn" onclick="toggleFamily()" style="background-color: #64ffda;">Ailəmi Görmək Üçün</button>
+        <button class="btn" onclick="toggleFriends()" style="background-color: #ff9900;">Dostlarımı Görmək Üçün</button>
     </div>
 
     <div class="section" id="familySection">
@@ -39,12 +40,29 @@
         </div>
     </div>
 
+    <div class="section" id="friendsSection">
+        <div class="list-box">
+            <h2>Dostlar</h2>
+            <ol>
+                <li>Kərim Həsənli</li>
+            </ol>
+        </div>
+    </div>
+
     <script>
-        function toggleFamily () {
+        function toggleFamily() {
             var section = document.getElementById("familySection");
+            var friends = document.getElementById("friendsSection");
+            friends.style.display = "none";
+            section.style.display = (section.style.display === "flex") ? "none" : "flex"; 
+        }
+
+        function toggleFriends() {
+            var section = document.getElementById("friendsSection");
+            var family = document.getElementById("familySection");
+            family.style.display = "none";
             section.style.display = (section.style.display === "flex") ? "none" : "flex"; 
         }
     </script>
-    
 </body>
 </html>
