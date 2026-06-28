@@ -4,87 +4,90 @@
     <meta charset="UTF-8">
     <title>Tərlanın Saytı</title>
     <style>
-        /* Fonu qaranlıqdan çıxarıb daha xoş və yumşaq bir gradient etdik */
-        body { 
-            margin: 0; 
-            background: linear-gradient(135deg, #e0eafc, #cfdef3); 
-            color: #333; 
-            font-family: 'Segoe UI', sans-serif; 
-            text-align: center; 
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #fff9c4, #ffcc80);
+            color: #263238;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
             min-height: 100vh;
         }
 
-        /* Başlıq hissəsini daha modern və seçilən etdik */
-        header { 
-            background-color: #ffffff; 
-            color: #007bff; 
-            padding: 25px; 
-            font-size: 32px; 
-            font-weight: bold; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        header {
+            background-color: #ff6f00;
+            color: #ffffff;
+            padding: 25px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .hero { margin-top: 50px; }
 
-        /* Düymələri daha canlı və yumşaq kənarlı etdik */
-        .btn { 
-            background-color: #007bff; 
-            color: white; 
-            padding: 15px 30px; 
-            text-decoration: none; 
-            border-radius: 25px; 
-            font-size: 20px; 
-            display: inline-block; 
-            margin: 10px; 
-            cursor: pointer; 
-            border: none; 
-            transition: transform 0.3s, box-shadow 0.3s; 
-            font-weight: bold; 
-            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        .btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 20px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(211,47,47,0.4);
         }
 
-        .btn:hover { 
-            background-color: #0056b3; 
-            transform: scale(1.05); 
+        .btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-5px);
         }
 
-        .section { margin-top: 50px; display: none; justify-content: center; padding: 20px; }
-        
-        .list-box { 
-            width: 80%; 
-            text-align: left; 
-            background: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+        .section { 
+            margin-top: 50px; 
+            display: none;
+            justify-content: center;
+            padding: 20px;
         }
 
-        h2 { 
-            border-bottom: 2px solid #007bff; 
-            display: inline-block; 
-            padding-bottom: 5px; 
-            color: #007bff; 
+        .list-box {
+            width: 80%;
+            text-align: left;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-bottom: 3px solid #ff6f00;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: #d32f2f;
         }
     </style>
 </head>
 <body>
-
+    
     <header>Tərlanın Saytı</header>
 
     <div class="hero">
-        <h1>3D dünyasına xoş gəldiniz!</h1>
-        <p>Welcome to the 3D World</p>
-        <a href="3d.html" class="btn">3D dünyasına giriş</a>
+        <h1>3D Dünyasına Xoş Gəldiniz!</h1>
+        <p>Welcome To The 3D World</p>
+        <a href="3d.html" class="btn">3D Dünyasına Giriş</a>
         <br>
-        <button class="btn" onclick="toggleFamily()" style="background-color: #28a745;">Ailəmi görmək üçün</button>
+        <button class="btn" onclick="toggleFamily()">Ailəmi görmək üçün Basın</button>
     </div>
 
     <div class="section" id="familySection">
         <div class="list-box">
             <h2>Ailə və Qohumlar</h2>
             <ol>
-                <li>Nigar(Anam)</li><li>İlqar(Atam)</li><li>Kənan(Qardaşım)</li><li>Şükran(Bacım)</li><li>Sənan(Qardaşım)</li><li>Rüfət(Əmim)</li><li>Afət(Bibim)</li><li>Hökümə(Qardaşımın Yoldaşı)</li>
-                <li>Xalidə(Nənəm)</li><li>Sabir(Babam)</li><li>Əsli(Nənəm)</li><li>Məhəmməd(Babam)</li><li>Əkbər(Babam)</li><li>Sayalı(Xalam)</li><li>Aynur(Xalam)</li>
+                <li>Nigar(Anam)</li><li>İlqar(Atam)</li><li><span style="color: #d32f2f; font-weight: bold;">Kənan(Qardaşım)</span></li>
+                <li>Şükran(Bacım)</li><li>Sənan(Qardaşım)</li><li>Rüfət(Əmim)</li><li>Afət(Bibim)</li><li>Hökümə</li><li>Xalidə(Nənəm)</li>
+                <li>Sabir(Babam)</li><li>Əsli(Nənəm)</li><li>Məhəmməd(Babam)</li><li>Əkbər(Babam)</li><li>Sayalı(Xalam)</li><li>Aynur(Xalam)</li>
                 <li>Süleyman(Dayım)</li><li>Ələkbər(Dayım)</li><li>Zəminə(Xalam D.D)</li><li>Aytən(Xalam D.D)</li><li>Nunuş(Xalam)</li><li>Emil(Dayım D.D)</li><li>Gülşən(Xalam Qızı)</li>
                 <li>Rəvan(Əmim Oğlu)</li><li>Xəyal(Xalam oğlu)</li><li>İslam(Xalam Oğlu)</li><li>Mələk(Dayım Qızı)</li><li>Fidan(Xalam Qızı)</li><li>Ayxan(Dayım Oğlu)</li><li>Ömər(Dayım Oğlu)</li>
                 <li>Uğur(Dayım Oğlu)</li>
@@ -98,6 +101,5 @@
             section.style.display = (section.style.display === "flex") ? "none" : "flex";
         }
     </script>
-
 </body>
 </html>
